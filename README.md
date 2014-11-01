@@ -48,7 +48,9 @@ android:name="UMENG_CHANNEL" android:value="${channel}"
 
 ### 2.3
 打包加入混淆时出现
+``` xml
 taskdef class proguard.ant.ProGuardTask cannot be found 
+``` 
 的错误
 在「[这里][2]」找到解决办法
 	2.3.1 在「[这里][3]」下载proguard
@@ -57,12 +59,18 @@ taskdef class proguard.ant.ProGuardTask cannot be found
 	
 ### 2.4
 如果你的proguard文件中同时加了
+``` xml
 -libraryjars libs/fastjson-1.1.26-android.jar
+``` 
 和包对于的class的
+``` xml
 -keep class com.alibaba.fastjson.**{*;}
+``` 
 那么打包的时候就会提示说加入了两次fastjson-1.1.26-android.jar
 解决办法把
+``` xml
 -libraryjars libs/fastjson-1.1.26-android.jar
+``` 
 去掉
 
 [1]: http://my.oschina.net/liucundong/blog/333301
