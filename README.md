@@ -1,7 +1,7 @@
 Android中使用ant进行多渠道打包
 ================
 
-### 1. 「[这篇][1]」文章有比较详细的介绍
+### 1. 首先看「[这篇文章][1]」，有比较详细的介绍，然后下面是我按照文章中所说遇到的问题以及解决的方式
 
 ## 2. 我遇到的问题
 ### 2.1
@@ -55,7 +55,7 @@ taskdef class proguard.ant.ProGuardTask cannot be found
 在「[这里][2]」找到解决办法
 
 
-	1. 在[http://proguard.sourceforge.net/]下载proguard
+	1. 在[proguard](http://proguard.sourceforge.net/)下载proguard
 	2. 解压放到{sdk.dir}/tools目录中，并把文件夹重命名为proguard
 	3. ok
 	
