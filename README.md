@@ -6,9 +6,14 @@ Android中使用ant进行多渠道打包
 ## 2. 我遇到的问题
 ### 2.1
 第一个问题是上面的实例是多工程的，我的项目是多【源码包】的，也就是说我的项目中除了src这个源代码文件夹之外，还有其他的源代码文件夹，
-比如volley,photoview，这样打包的时候volley,photoview这些源代码包中的类就会找不到。Google之后，解决方案是：
+比如volley,photoview，这样打包的时候volley,photoview这些源代码包中的类就会找不到。
+
+Google之后，解决方案是：
+
 在local.properties中加入
+
 source.dir=src;photoview;volley
+
 这样第一个问题就解决了
 
 ### 2.2
