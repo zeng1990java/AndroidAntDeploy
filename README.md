@@ -53,9 +53,17 @@ taskdef class proguard.ant.ProGuardTask cannot be found
 ``` 
 的错误
 在「[这里][2]」找到解决办法
+
+
 	1. 在「[这里][3]」下载proguard
+	
+	
 	2. 解压放到{sdk.dir}/tools目录中，并把文件夹重命名为proguard
+	
+	
 	3. ok
+	
+	
 	
 ### 2.4
 如果你的proguard文件中同时加了
