@@ -13,24 +13,37 @@ source.dir=src;photoview;volley
 
 ### 2.2
 AndroidManifest.xml中的UMENG_CHANNEL替换时出错，要注意的是下面的代码一定要在一行中，并且android:name要在前面
+``` xml
 <meta-data android:name="UMENG_CHANNEL" android:value="360"  />
+``` 
+
 比如如果是下面这样就会替换失败
+``` xml
 <meta-data android:name="UMENG_CHANNEL"
  android:value="360"  />
+ ``` 
  或者下面这样也会失败
+ ``` xml
  <meta-data android:value="360" android:name="UMENG_CHANNEL"  />
+ ``` 
  
  具体原因可以在build.xml中找到这里
+  ``` xml
  <replaceregexp
 		    encoding="utf-8"
 		    file="AndroidManifest.xml"
 		    flags="s"
 		    match='android:name="UMENG_CHANNEL".+android:value="([^"]+)"'
 		    replace='android:name="UMENG_CHANNEL" android:value="${channel}"'/>
+ ``` 
 上面的作用就是替换渠道，做法是在AndroidManifest.xml文件查找
+ ``` xml
 android:name="UMENG_CHANNEL".+android:value="([^"]+)"
+ ``` 
 的字符串，然后替换成
+ ``` xml
 android:name="UMENG_CHANNEL" android:value="${channel}"
+ ``` 
 的字符串
 
 ### 2.3
